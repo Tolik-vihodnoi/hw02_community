@@ -9,6 +9,6 @@ class PostAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
     list_editable = ('group',)
 
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Group)
-
