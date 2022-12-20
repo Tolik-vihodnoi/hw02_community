@@ -5,7 +5,8 @@ from .models import Group, Post
 
 
 def index(request):
-    posts = Post.objects.select_related('author', 'group')[:settings.NUM_OF_POSTS]
+    posts = Post.objects.select_related('author',
+                                        'group')[:settings.NUM_OF_POSTS]
     context = {
         'posts': posts,
     }
@@ -14,7 +15,8 @@ def index(request):
 
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
-    posts = group.posts.select_related('author', 'group')[:settings.NUM_OF_POSTS]
+    posts = group.posts.select_related('author',
+                                       'group')[:settings.NUM_OF_POSTS]
     context = {
         'group': group,
         'posts': posts,
