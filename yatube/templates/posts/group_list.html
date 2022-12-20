@@ -7,7 +7,7 @@
 {% block content %}
   <h1>Записи сообщества {{ group.title }}</h1>
     <p>
-      {{ group.description }}
+      {{ group.description|linebreaksbr }}
     </p>
   {% for post in posts %}
     {% include 'includes/article.html' %}
