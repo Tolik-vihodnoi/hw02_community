@@ -7,7 +7,7 @@ from .forms import CreationForm
 
 class SignUp(CreateView):
     form_class = CreationForm
-    success_url = reverse_lazy('posts:main')
+    success_url = reverse_lazy('posts:index')
     template_name = 'users/signup.html'
 
 class PasswordChange(PasswordChangeView):
@@ -15,5 +15,5 @@ class PasswordChange(PasswordChangeView):
     template_name = 'users/password_change_form.html'
 
 class Login(LoginView):
-    success_url = reverse_lazy('posts:main')
+    success_url = reverse_lazy('posts:index')
     template_name = 'users/login.html'

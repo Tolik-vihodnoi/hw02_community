@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'posts.apps.PostsConfig',
     'users.apps.UsersConfig',
-    'core.apps.CoreConfig'
+    'core.apps.CoreConfig',
+    'about.apps.AboutConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,5 +136,5 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 # My variables
 NUM_OF_POSTS: int = 10
 LOGIN_URL = 'users:login'
-LOGIN_REDIRECT_URL = 'posts:main'
-LOGOUT_REDIRECT_URL = 'posts:main'
+LOGIN_REDIRECT_URL = 'posts:index'
+LOGOUT_REDIRECT_URL = 'posts:index'
